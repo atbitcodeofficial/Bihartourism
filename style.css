@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background-image: url(img.jpg); */
+    background-image: url(BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* animation: changing_bg 20s linear infinite; */
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    /* background-color: orange; */
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 20px;
+    color: white;
+}
+
+.logo_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo_div h1 {
+    text-transform: uppercase;
+    font-size: 30px
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    width: 15px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+}
+
+nav ul .active {
+    color: black;
+    background-color: white;
+    border-radius: 3px;
+}
+
+nav .logo_div img {
+    width: 45px;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+.content {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+}
+
+.content h2 {
+    font-size: 25px;
+}
+
+.content h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0px 0px 20px 0px;
+}
+
+.content p {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.content a {
+    padding: 7px 14px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.2s all ease;
+    overflow: hidden;
+}
+
+.content a:active {
+    transform: scale(90%);
+}
+
+.content a::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: 0.5s all ease;
+}
+
+.content a:hover::before {
+    transform: translateY(0);
+}
+
+.content a:hover {
+    padding: 9px 18px;
+}
+
+.places::after {
+    content: "";
+    animation: changing 50s linear infinite;
+    color: #3737e4;
+}
+
+@keyframes changing {
+    0% {
+        content: "ARARIA";
+    }
+
+    2.6% {
+        content: "ARWAL";
+    }
+
+    5.4% {
+        content: "AURANGABAD";
+    }
+
+    5.2% {
+        content: "BANKA";
+    }
+
+    7.8% {
+        content: "BEGUSARAI";
+    }
+
+    10.4% {
+        content: "BHAGALPUR";
+    }
+
+    13% {
+        content: "BOJPUR";
+    }
+
+    15.6% {
+        content: "BUXAR";
+    }
+
+    18.2% {
+        content: "DARBHANGA";
+    }
+
+    20.8% {
+        content: "EAST CHAMPARAN";
+    }
+
+    23.4% {
+        content: "GAYA";
+    }
+
+    26% {
+        content: "GOPALGANJ";
+    }
+
+    28.6% {
+        content: "JAMUI";
+    }
+
+    31.2% {
+        content: "JEHENABAD";
+    }
+
+    33.8% {
+        content: "KHAGARIA";
+    }
+
+    36.4% {
+        content: "KISHANGANJ";
+    }
+
+    39% {
+        content: "KAIMUR";
+    }
+
+    41.6% {
+        content: "KATIHAR";
+    }
+
+    44.2% {
+        content: "LAKHISARAI";
+    }
+
+    46.8% {
+        content: "MADHUBANI";
+    }
+
+    49.4% {
+        content: "MUNGER";
+    }
+
+    52% {
+        content: "MADHEPURA";
+    }
+
+    54.6% {
+        content: "MUZAFFARPUR";
+    }
+
+    57.2% {
+        content: "NALANDA";
+    }
+
+    59.8% {
+        content: "NAWADA";
+    }
+
+    62.4% {
+        content: "PATNA";
+    }
+
+    65% {
+        content: "PURNIA";
+    }
+
+    67.6% {
+        content: "ROHTAS";
+    }
+
+    70.2% {
+        content: "SHARSA";
+    }
+
+    72.8% {
+        content: "SMASTIPUR";
+    }
+
+    75.4% {
+        content: "SHEOHAR";
+    }
+
+    78% {
+        content: "SHEIKHPURA";
+    }
+
+    80.6% {
+        content: "SARAN";
+    }
+
+    83.2% {
+        content: "SITAMARHI";
+    }
+
+    85.8% {
+        content: "SUPAUL";
+    }
+
+    88.4% {
+        content: "SIWAN";
+    }
+
+    91% {
+        content: "VAISHALI";
+    }
+
+    100% {
+        content: "WEST CHAMPARAN";
+    }
+}
+
+/* //////////////////////media/////////////////////// */
+/* ///////////////////////media//////////////////////// */
+/* ///////////////////////media//////////////////////// */
+/* ///////////////////////media//////////////////////// */
+
+@media screen and (max-width: 991px) {
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        flex-direction: column;
+        z-index: 500;
+    }
+
+    .bar {
+        height: 2px;
+        width: 20px;
+        background-color: #fff;
+        transition: all 0.2s ease-in;
+    }
+
+    .check {
+        opacity: 0;
+    }
+
+    input[type="checkbox"]:checked~ul {
+        transform: translateY(0);
+    }
+
+    input[type="checkbox"]:checked~.hamburger>.center {
+        opacity: 0;
+    }
+
+    input[type="checkbox"]:checked~.hamburger>.top {
+        transform: rotate(135deg) translateY(-7px);
+    }
+
+    input[type="checkbox"]:checked ~ .hamburger > .bottom {
+        transform: rotate(-135deg) translateY(7px);
+    }
+
+    ul {
+        /* transform: translateY(140px); */
+        margin-top: 290px;
+        background-color: rgba(0, 0, 0, 0.589);
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px 10px 10px 10px;
+        transform: translateY(-150%);
+        transition: all 0.3s ease-out;
+        width: 100%;
+        z-index: -5;
+    }
+
+    nav {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    nav ul li a:hover {
+        color: #3737e4;
+        background-color: transparent;
+    }
+
+    nav ul .active {
+        color: #3737e4;
+        background-color: transparent;
+    }
+
+    body {
+        font-family: sans-serif;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        /* background-image: url(img.jpg); */
+        background-image: url(BG_2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+
+/* /////////////////////////////////////// */
+
+@media screen and (max-width: 500px) {
+    .content h1 {
+        font-size: 35px;
+        text-transform: uppercase;
+        margin: 0px 0px 20px 0px;
+    }
+
+    body {
+        font-family: sans-serif;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        /* background-image: url(img.jpg); */
+        background-image: url(BG_3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+/* ///////////////////////media//////////////////////// */
+/* ///////////////////////media//////////////////////// */
+/* ///////////////////////media//////////////////////// */
+/* ///////////////////////media//////////////////////// */
